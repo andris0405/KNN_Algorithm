@@ -73,8 +73,40 @@
                                 <td>{{$key->tgl}}</td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                        <a href="#" class="btn btn-primary shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit_{{$key->id}}"><i class="fas fa-pencil-alt"></i></a>
+                                        <div class="modal fade" id="edit_{{$key->id}}">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Edit Data</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                        </button>
+                                                    </div>
+                                                    <form action="" method="POST" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label>Name</label>
+                                                                <input type="text" name="name" class="form-control" value="{{$key->name}}">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Quantity</label>
+                                                                <input type="number" class="form-control" name="qty" value="{{$key->qty}}">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Date</label>
+                                                                <input type="date" name="tgl" class="form-control" value="{{$key->tgl}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Update</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a record="product" recordid="{{$key->id}}" href="javascript:void(0)" class="btn btn-danger shadow btn-xs sharp confirmDelete"><i class="fa fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>

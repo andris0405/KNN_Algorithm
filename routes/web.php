@@ -25,4 +25,5 @@ Route::prefix('admin')->group(function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/product', ProductController::class);
     Route::post('/import_product', [ProductController::class, 'import_product'])->name('import.product');
+    Route::get('/delete-product/{id}', [ProductController::class, 'delete_product']);
 });

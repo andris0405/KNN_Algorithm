@@ -120,6 +120,7 @@
     </div>
 
     <div id="main-wrapper">
+        @include('sweetalert::alert')
         @include('layouts.inc.nav_header')
         @include('layouts.inc.header')
         @include('layouts.inc.sidebar')
@@ -162,6 +163,8 @@
     <script src="{{asset('assets/js/custom.min.js')}}"></script>
 	<script src="{{asset('assets/js/dlabnav-init.js')}}"></script>
 	<script src="{{asset('assets/js/demo.js')}}"></script>
+    <script src="{{asset('assets/js/custome.js')}}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script>
 		function cardsCenter()
 		{

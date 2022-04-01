@@ -111,4 +111,11 @@ class ProductController extends Controller
 
         }
     }
+
+    public function delete_product($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+        return back();
+    }
 }
