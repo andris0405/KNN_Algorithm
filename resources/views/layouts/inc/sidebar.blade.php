@@ -14,9 +14,9 @@
                     <span class="nav-text">Apps</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{route('product.index')}}">Product</a></li>
-                    <li><a href="post-details.html">Post Details</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                    {{-- <li><a href="{{route('product.index')}}">Product</a></li> --}}
+                    <li><a href="{{route('test.index')}}">Test Regression</a></li>
+                    {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                         <ul aria-expanded="false">
                             <li><a href="email-compose.html">Compose</a></li>
                             <li><a href="email-inbox.html">Inbox</a></li>
@@ -34,11 +34,11 @@
                             <li><a href="ecom-invoice.html">Invoice</a></li>
                             <li><a href="ecom-customers.html">Customers</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
         </ul>
-        <div class="side-bar-profile">
+        {{-- <div class="side-bar-profile">
             <div class="d-flex align-items-center justify-content-between mb-3">
                 <div class="side-bar-profile-img">
                     <img src="images/user.jpg" alt="">
@@ -60,7 +60,7 @@
                     <span class="sr-only">45% Complete</span>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="copyright">
             <p><strong>Fillow Saas Admin</strong> © 2021 All Rights Reserved</p>

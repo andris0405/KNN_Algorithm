@@ -8,6 +8,8 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use Phpml\Classification\KNearestNeighbors;
+use Phpml\Regression\LeastSquares;
 
 class ProductController extends Controller
 {
@@ -110,6 +112,38 @@ class ProductController extends Controller
 
 
         }
+    }
+
+    public function prediksi()
+    {
+        // $product = Product::get()->toArray();
+
+        // $samples = [];
+        // $targets = [];
+
+        // foreach ($product as $key) {
+        //     $name = $key['name'];
+        //     $tgl = $key['tgl'];
+        //     $data = [];
+
+        //     array_push($data, $name, $tgl);
+        //     array_push($samples, $data);
+
+        //     $qty = $key['qty'];
+        //     array_push($targets, $qty);
+
+        // }
+
+        // dd($targets);
+
+        $samples = [['oke', '2020-16-01'], ['oke', '2020-15-01'], ['kamhe', '2020-16-01'], ['teja', '2020-14-01'], ['oke', '2020-15-02'], ['teka', '2020-15-03']];
+        $labels = ['1', '5', '5', '2', '2', '3'];
+
+        $classifier = new LeastSquares();
+        $classifier->train($samples, $labels);
+        echo $classifier->predict(["oke", "2020-07-14"]);
+
+
     }
 
     public function delete_product($id)

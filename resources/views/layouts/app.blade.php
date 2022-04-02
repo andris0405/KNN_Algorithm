@@ -101,7 +101,7 @@
 	<title>Sistem Prediksi Penerima PKH</title>
 
 	<!-- FAVICONS ICON -->
-	<link rel="shortcut icon" type="image/png" href="{{asset('assets/images/favicon.png')}}">
+	<link rel="shortcut icon" type="image/png" href="">
 	<link href="{{asset('assets/vendor/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet">
 	<link href="{{asset('assets/vendor/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="{{asset('assets/vendor/nouislider/nouislider.min.css')}}">
@@ -148,8 +148,6 @@
 	<script src="{{asset('assets/vendor/chart.js/Chart.bundle.min.js')}}"></script>
 	<script src="{{asset('assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js')}}"></script>
 
-	<!-- Apex Chart -->
-	<script src="{{asset('assets/vendor/apexchart/apexchart.js')}}"></script>
 
 	<script src="{{asset('assets/vendor/chart.js/Chart.bundle.min.js')}}"></script>
 
